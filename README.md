@@ -1,23 +1,31 @@
-# AnimateFX Library
+[![Build Status](https://travis-ci.org/Typhon0/AnimateFX.svg?branch=master)](https://travis-ci.org/Typhon0/AnimateFX)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Bintray](https://api.bintray.com/packages/typhon0/AnimateFX/animatefx/images/download.svg)](https://bintray.com/typhon0/AnimateFX/animatefx)
+[![Join the chat at https://gitter.im/AnimateFX/Lobby](https://badges.gitter.im/AnimateFX/Lobby.svg)](https://gitter.im/AnimateFX/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![HitCount](http://hits.dwyl.io/Typhon0/AnimateFX.svg)](http://hits.dwyl.io/Typhon0/AnimateFX)
 
-**A library of more than 70 ready to use animations for JavaFX**
+# AnimateFX
+A library of ready-to-use animations for JavaFX
 
-**Features:**
-- Custom _animations_, and _interpolators_
-- Successive animations
-- Animations on actions
-**More features are comming soon**
+Features:
 
-## Installation
+* Custom animations
+* Custom interpolators
+* Play/Stop animation
+* Play an animation after another 
+* More to come
+
+# Installation
+
 ### Gradle
-
-```gradle
+```
 dependencies {
-  compile 'io.github.typhon0:AnimateFX:1.2.1'
+compile 'io.github.typhon0:AnimateFX:1.2.1'
 }
 ```
 ### Maven
-```xml
+
+```
 <dependency>
   <groupId>io.github.typhon0</groupId>
   <artifactId>AnimateFX</artifactId>
@@ -25,10 +33,10 @@ dependencies {
   <type>pom</type>
 </dependency>
 ```
-
 ## Snapshot
+
 ### Gradle
-```gradle
+```
 repositories {
 	maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local' }
 }
@@ -39,8 +47,9 @@ dependencies {
 ```
 
 ### Maven
-```xml
-<repositories>
+
+```
+ <repositories>
  	<repository>
             <id>snapshots</id>
             <name>libs-snapshot</name>
@@ -56,22 +65,39 @@ dependencies {
         </dependency>
  </dependencies>
 ```
+# Quick start
 
-## Quick Start
-### Basic
-The basic usage of AnimationFX
-```java
+#### Basic
+
+```
 Text text = new Text("AnimateFX");
 new Bounce(text).play();
 ```
 
-### Successive animations
-```java
-Text text = new Text("AnimateFX");
-public void HandleAnimation(ActionEvent actionEvent) {
-    new Bounce(text).setPlayOnFinished(new BounceIn(text)).play();
-}
+#### Play an animation after another
+
+```
+    Text text = new Text("AnimateFX");
+    public void HandleAnimation(ActionEvent actionEvent) {
+      new Bounce(text).setPlayOnFinished(new BounceIn(text)).play();
+      }
 ```
 
-## Credits
+# Contributing
+
+Please see  [CONTRIBUTING.md](https://github.com/Typhon0/AnimateFX/blob/master/CONTRIBUTING.md) for more information.
+
+# Using AnimateFX ?
+
+Fork the repository and update the "Project using AnimateFX" section in the following format adding your project details and do a Pull Request!
+
+    Project_Name : Brief_Description
+
+
+# Projects using AnimateFX
+
+
+
+# Credits
+
 Animations are inspired from the awesome project [Animate.css](https://github.com/daneden/animate.css)
